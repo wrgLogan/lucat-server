@@ -1,11 +1,7 @@
-var router = function(app)　{
-	app.get('/name', function(req, res) {
-		var param = {
-			name: 'logan'
-		};
-		
-		res.send(param);
-	})
+var userApis = require('./api/user');
+
+var router = function (app) 　{
+	userApis(app);
 }
 
 module.exports = router;
